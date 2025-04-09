@@ -1,0 +1,22 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #202124;
+  margin-bottom: 30px;
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}

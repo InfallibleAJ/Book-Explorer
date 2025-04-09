@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #202124;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 8px;
+  color: #5f6368;
+  transition: color 0.2s ease;
+}
+
+.backButton:hover {
+  color: #202124;
+}
