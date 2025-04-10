@@ -1,12 +1,48 @@
-# React + Vite
+# Guten Quest - Gutendex Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Description
 
-Currently, two official plugins are available:
+A responsive web application for discovering and reading free books from Project Gutenberg's extensive collection. Features include:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Browse books by genre/category
+- Infinite scroll pagination
+- Combined genre + text search
+- Smart format detection (HTML > PDF > TXT)
+- Mobile-optimized interface
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Category       | Technology                 |
+|----------------|----------------------------|
+| Framework      | React 18                   |
+| Build Tool     | Vite 4                     |
+| Routing        | React Router 6             |
+| HTTP Client    | Axios                      |
+| Styling        | CSS Modules                |
+| Fonts          | Montserrat (SemiBold)      |
+| UI Patterns    | Infinite Scroll            |
+
+## ⚙️ System Requirements
+
+- Node.js 16+
+- npm 8+ or yarn 1.22+
+- Git (for version control)
+- Modern web browser
+
+## 🚀 Installation & Setup
+
+### 1. Install dependencies Clone the repository
+```bash
+git clone https://github.com/your-username/book-explorer.git
+cd book-explorer
+
+### 2. Install dependencies
+npm install
+# or
+yarn install
+
+### 3.Run the application
+npm run dev
+# or
+yarn dev
+
