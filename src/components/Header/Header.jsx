@@ -5,10 +5,10 @@ const Header = ({ title, onBack }) => {
     <header className={styles.header}>
       {onBack && (
         <button className={styles.backButton} onClick={onBack}>
-          &larr;
+          &#x2190;
         </button>
       )}
-      <h1 className={styles.title}>{title}</h1>
+      <p className={styles.title}>{title}</p>
     </header>
   );
 };

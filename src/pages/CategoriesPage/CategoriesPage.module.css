@@ -1,22 +1,38 @@
 .container {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
+  background-color: #F8F7FF;
 }
 
-.content {
-  margin-top: 20px;
+.header {
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  color: #5E56E7;
+  margin: 20px;
 }
 
 .subtitle {
-  text-align: center;
-  color: #202124;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #5E56E7;
   margin-bottom: 30px;
 }
 
+
 .categoriesGrid {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
-  padding: 20px 0;
+  background-color: #F8F7FF;
+  padding: 20px;
 }

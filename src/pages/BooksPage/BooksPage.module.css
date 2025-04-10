@@ -1,16 +1,24 @@
 .container {
+  /* padding: 20px; */
+}
+
+.headerContainer,
+.searchBarContainer,
+.bookContainer {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
 }
 
 .content {
   margin-top: 20px;
+  background-color: #F8F7FF;
+
+
 }
 
 .booksGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 20px;
   padding: 20px 0;
 }
@@ -27,4 +35,8 @@
   margin-top: 50px;
   font-size: 1.2rem;
   color: #666;
+}
+
+.bookContainer {
+  background-color: #F8F7FF;
 }

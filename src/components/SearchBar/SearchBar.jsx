@@ -1,35 +1,42 @@
-import { useState } from "react";
+import { useState, useCallback, useEffect } from "react";
 import styles from "./SearchBar.module.css";
 
 const SearchBar = ({ onSearch }) => {
   const [query, setQuery] = useState("");
 
+  const debounce = (func, delay) => {
+    let timeoutId;
+    return (...args) => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        func(...args);
+      }, delay);
+    };
+  };
+
+  const debouncedOnSearch = useCallback(
+    debounce((newQuery) => {
+      onSearch(newQuery);
+    }, 300),
+    [onSearch]
+  );
+
   const handleChange = (e) => {
     const value = e.target.value;
     setQuery(value);
-    if (value === "") {
-      onSearch("");
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSearch(query);
+    debouncedOnSearch(value);
   };
 
   return (
-    <form className={styles.searchBar} onSubmit={handleSubmit}>
+    <div className={styles.searchBar}>
       <input
         type="text"
-        placeholder="Search books..."
+        placeholder="Search"
         value={query}
         onChange={handleChange}
         className={styles.input}
       />
-      <button type="submit" className={styles.button}>
-        Search
-      </button>
-    </form>
+    </div>
   );
 };
 

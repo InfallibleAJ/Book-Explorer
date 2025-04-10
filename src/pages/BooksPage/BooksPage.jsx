@@ -65,10 +65,14 @@ const BooksPage = () => {
 
   return (
     <div className={styles.container}>
-      <Header title={topic} onBack={handleBack} />
+      <div className={styles.headerContainer}>
+        <Header title={topic} onBack={handleBack} />
+      </div>
 
       <div className={styles.content}>
-        <SearchBar onSearch={handleSearch} />
+        <div className={styles.searchBarContainer}>
+          <SearchBar onSearch={handleSearch} />
+        </div>
 
         {loading ? (
           <div className={styles.loading}>
@@ -77,17 +81,19 @@ const BooksPage = () => {
         ) : books.length === 0 ? (
           <p className={styles.noResults}>No books found for this category.</p>
         ) : (
-          <InfiniteScroll
-            dataLength={books.length}
-            next={loadMoreBooks}
-            hasMore={hasMore}
-            loader={<Spinner />}
-            className={styles.booksGrid}
-          >
-            {books.map((book) => (
-              <BookCard key={book.id} book={book} onClick={handleBookClick} />
-            ))}
-          </InfiniteScroll>
+          <div className={styles.bookContainer}>
+            <InfiniteScroll
+              dataLength={books.length}
+              next={loadMoreBooks}
+              hasMore={hasMore}
+              loader={<Spinner />}
+              className={styles.booksGrid}
+            >
+              {books.map((book) => (
+                <BookCard key={book.id} book={book} onClick={handleBookClick} />
+              ))}
+            </InfiniteScroll>
+          </div>
         )}
       </div>
     </div>

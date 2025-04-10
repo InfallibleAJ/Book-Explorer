@@ -18,8 +18,8 @@ const BookCard = ({ book, onClick }) => {
         )}
       </div>
       <div className={styles.details}>
-        <h3 className={styles.title}>{book.title}</h3>
-        <p className={styles.author}>{authors}</p>
+        <p className={styles.title}>{book.title}</p>
+        <p className={styles.author}>By {authors}</p>
       </div>
     </div>
   );

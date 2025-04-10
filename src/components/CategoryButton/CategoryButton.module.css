@@ -1,21 +1,55 @@
 .button {
-  padding: 12px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  padding: 6px 10px;
+  height: auto;
+  min-height: 50px;
+  box-shadow: 0 2px 5px 0 rgba(211, 209, 238, 0.5);
   border: none;
-  border-radius: 6px;
-  background-color: #4285f4;
-  color: white;
-  font-size: 1rem;
-  font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-  text-align: center;
+  text-align: left;
+  font-size: 20px;
+  background-color: white;
 }
 
 .button:hover {
-  background-color: #3367d6;
   transform: translateY(-1px);
 }
 
 .button:active {
   transform: translateY(0);
+}
+
+.categoryText {
+  font-size: 20px;
+  flex-grow: 1;
+  margin: 0 10px;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  line-height: 1.2;
+  color: #333333;
+}
+
+.arrow {
+  color: #5E56E7;
+  font-size: 1em;
+  font-weight: 400;
+  display: inline-block;
+  transform: scaleX(0.8);
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.funnelIcon {
+  margin-right: 10px;
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
 }

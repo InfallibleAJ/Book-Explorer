@@ -1,35 +1,36 @@
 .card {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
-  background: white;
+  width: 100%;
+  border-radius: 8px;
+  transition: box-shadow 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .imageContainer {
-  height: 200px;
+  width: 100%;
+  height: 162px;
   overflow: hidden;
+  border-radius: 8px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: #f5f5f5;
 }
 
 .image {
-  width: 100%;
+  display: block;
+  width: 114px;
   height: 100%;
   object-fit: cover;
 }
 
 .placeholder {
   width: 100%;
-  height: 100%;
+  height: 162px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,22 +39,48 @@
 }
 
 .details {
-  padding: 12px;
+  padding: 8px;
+  text-align: left;
 }
 
 .title {
   margin: 0;
-  font-size: 1rem;
-  white-space: nowrap;
+  font-size: 12px;
+  font-weight: bold;
   overflow: hidden;
-  text-overflow: ellipsis;
+  color: #333333;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
+}
+
+.card:hover .title {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .author {
-  margin: 4px 0 0;
-  font-size: 0.8rem;
-  color: #666;
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #A0A0A0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
+}
+
+.card:hover .author {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+@media (min-width: 300px) and (max-width: 450px) {
+  .title {
+    padding-left: 20px;
+  }
+
+  .author {
+    padding-left: 20px;
+  }
 }
